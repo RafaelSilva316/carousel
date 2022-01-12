@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: #333 1px solid; */
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10px/16px =.625 */
+  font-size: 62.5%;
+  overflow-x: hidden;
+  /* doesnt work on safari or edge */
+  /* scroll-behavior: smooth; */
+}
+body {
+  font-family: "Work Sans", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+  overflow-x: hidden;
+}
+
+.carousel {
+  margin: 0 auto;
+  max-width: 96rem;
+  display: grid;
+  grid-template-columns: 1fr 60rem 1fr;
+}
+
+.arrow {
+  grid-row: span 2;
+  margin: auto auto;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #777;
+}
+
+.arrow:hover {
+  cursor: pointer;
+  color: #aaa;
+}
+
+.left-arrow {
+}
+
+.frame {
+  background-color: black;
+  position: relative;
+  height: 51rem;
+  width: 60rem;
+  overflow-x: hidden;
+}
+
+.slide {
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  position: absolute;
+  height: 50rem;
+  left: 0;
+  transition: left 0.2s;
+}
+
+img {
+  max-height: 50rem;
+  width: 60rem;
+}
+
+.right-arrow {
+}
+
+.nav-dots {
+  grid-column: 2;
+  display: flex;
+  margin: 0 auto;
+}
+
+.navdot {
+  border: 1px solid #ccc;
+  background-color: #eee;
+  border-radius: 100%;
+  width: 2.4rem;
+  height: 2.4rem;
+  cursor: pointer;
+}
+
+.navdot.active {
+  background-color: #999;
+  cursor: default;
+}
